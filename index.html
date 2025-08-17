@@ -1,126 +1,71 @@
-<!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empleo del Metal</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f9;
-    }
-    header {
-      background: #003366;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav {
-      background: #0055aa;
-      padding: 0.5rem;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .ofertas {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1rem;
-      padding: 1rem;
-    }
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 1rem;
-    }
-    .card h2 {
-      margin: 0;
-      color: #003366;
-    }
-    .card button {
-      background: #003366;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-right: 0.5rem;
-    }
-    .card button:hover {
-      background: #0055aa;
-    }
-    section#perfil {
-      padding: 2rem;
-      background: #eaeaea;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajos Metal</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Portal de Empleo del Metal</h1>
-    <p>Encuentra tu próxima oportunidad laboral en el sector del metal</p>
-  </header>
+    <header>
+        <h1>Trabajos Metal</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#registro">Registro</a>
+            <a href="#publicar">Publicar Oferta</a>
+            <a href="#perfil">Mi Perfil</a>
+        </nav>
+    </header>
 
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="#ofertas">Ofertas</a>
-    <a href="#perfil">Mi Perfil</a>
-  </nav>
+    <main>
+        <section id="inicio">
+            <h2>Ofertas destacadas</h2>
+            <div id="ofertas">
+                <!-- Aquí aparecerán las ofertas -->
+            </div>
+        </section>
 
-  <section class="ofertas" id="ofertas">
-    <div class="card">
-      <h2>Soldador MIG/MAG</h2>
-      <p>Empresa: Metalúrgica Pérez</p>
-      <p>Ubicación: Madrid</p>
-      <button onclick="guardarOferta('Soldador MIG/MAG - Metalúrgica Pérez')">💾 Guardar</button>
-      <a href="#"><button>Ver más</button></a>
-    </div>
-    <div class="card">
-      <h2>Inspector de Calidad</h2>
-      <p>Empresa: Aceros S.A.</p>
-      <p>Ubicación: Bilbao</p>
-      <button onclick="guardarOferta('Inspector de Calidad - Aceros S.A.')">💾 Guardar</button>
-      <a href="#"><button>Ver más</button></a>
-    </div>
-  </section>
+        <section id="registro">
+            <h2>Registro de Usuario</h2>
+            <form id="formRegistro">
+                <label>Tipo de usuario:</label>
+                <select id="tipoUsuario">
+                    <option value="candidato">Candidato</option>
+                    <option value="empresa">Empresa</option>
+                </select>
+                <label>Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label>Email:</label>
+                <input type="email" id="email" required>
+                <label>Contraseña:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
 
-  <section id="perfil">
-    <h2>Mi Perfil - Ofertas Guardadas</h2>
-    <ul id="listaGuardadas"></ul>
-  </section>
+        <section id="publicar">
+            <h2>Publicar Oferta (Empresas)</h2>
+            <form id="formPublicar">
+                <label>Título de la oferta:</label>
+                <input type="text" id="titulo" required>
+                <label>Descripción:</label>
+                <textarea id="descripcion" required></textarea>
+                <button type="submit">Publicar</button>
+            </form>
+        </section>
 
-  <script>
-    function guardarOferta(oferta) {
-      let guardadas = JSON.parse(localStorage.getItem('ofertasGuardadas')) || [];
-      if(!guardadas.includes(oferta)){
-        guardadas.push(oferta);
-        localStorage.setItem('ofertasGuardadas', JSON.stringify(guardadas));
-        alert('Oferta guardada ✅');
-        mostrarGuardadas();
-      } else {
-        alert('Ya la tienes guardada ⚠️');
-      }
-    }
+        <section id="perfil">
+            <h2>Mi Perfil</h2>
+            <form id="formCV">
+                <label>Subir CV (PDF):</label>
+                <input type="file" id="cv" accept=".pdf">
+                <button type="submit">Guardar CV</button>
+            </form>
+        </section>
+    </main>
 
-    function mostrarGuardadas() {
-      let guardadas = JSON.parse(localStorage.getItem('ofertasGuardadas')) || [];
-      let lista = document.getElementById('listaGuardadas');
-      lista.innerHTML = '';
-      guardadas.forEach(oferta => {
-        let li = document.createElement('li');
-        li.textContent = oferta;
-        lista.appendChild(li);
-      });
-    }
-
-    mostrarGuardadas();
-  </script>
+    <footer>
+        <p>© 2025 Trabajos Metal</p>
+    </footer>
 </body>
 </html>

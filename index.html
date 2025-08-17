@@ -3,59 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empleo del Metal</title>
+  <title>Portal de Empleo del Metal</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f9;
-    }
-    header {
-      background: #003366;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav {
-      background: #0055aa;
-      padding: 0.5rem;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .ofertas {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1rem;
-      padding: 1rem;
-    }
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 1rem;
-    }
-    .card h2 {
-      margin: 0;
-      color: #003366;
-    }
-    .card button {
-      background: #003366;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .card button:hover {
-      background: #0055aa;
-    }
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f9; }
+    header { background:#003366; color:white; padding:1rem; text-align:center; }
+    .ofertas { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1rem; padding:1rem; }
+    .card { background:white; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); padding:1rem; }
+    .card h2 { margin:0; color:#003366; }
+    .card button { background:#003366; color:white; border:none; padding:0.5rem 1rem; border-radius:5px; cursor:pointer; }
+    .card button:hover { background:#0055aa; }
   </style>
 </head>
 <body>
@@ -64,30 +20,18 @@
     <p>Encuentra tu próxima oportunidad laboral en el sector del metal</p>
   </header>
 
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="ofertas.html">Ofertas</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-
   <section class="ofertas">
     <div class="card">
       <h2>Soldador MIG/MAG</h2>
       <p>Empresa: Metalúrgica Pérez</p>
       <p>Ubicación: Madrid</p>
-      <button onclick="window.location.href='soldador.html'">Ver más</button>
+      <a href="soldador.html"><button>Ver más</button></a>
     </div>
     <div class="card">
       <h2>Inspector de Calidad</h2>
       <p>Empresa: Aceros S.A.</p>
       <p>Ubicación: Bilbao</p>
-      <button onclick="window.location.href='inspector.html'">Ver más</button>
-    </div>
-    <div class="card">
-      <h2>Tornero CNC</h2>
-      <p>Empresa: MetalFormas</p>
-      <p>Ubicación: Valencia</p>
-      <button onclick="window.location.href='tornero.html'">Ver más</button>
+      <a href="inspector.html"><button>Ver más</button></a>
     </div>
   </section>
 </body>

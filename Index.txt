@@ -1,1 +1,15 @@
-index.html
+<h1>Ofertas de empleo del sector metal</h1>
+
+<div class="tarjeta">
+  <h2>Soldador/a MIG</h2>
+  <p>Ubicación: Madrid</p>
+  <p>Experiencia: 3 años</p>
+  <p>Contacto: empleo@empresa.com</p>
+</div>
+
+<div class="tarjeta">
+  <h2>Operario/a de taller</h2>
+  <p>Ubicación: Barcelona</p>
+  <p>Experiencia: 2 años</p>
+  <p>Contacto: empleo@empresa.com</p>
+</div>

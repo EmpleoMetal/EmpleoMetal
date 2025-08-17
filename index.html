@@ -1,25 +1,70 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>EmpleoMetal</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Bienvenido a EmpleoMetal</h1>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empleo del Metal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+    }
+    header {
+      background: #003366;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .ofertas {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+    }
+    .card h2 {
+      margin: 0;
+      color: #003366;
+    }
+    .card button {
+      background: #003366;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background: #0055aa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portal de Empleo del Metal</h1>
+    <p>Encuentra tu próxima oportunidad laboral en el sector del metal</p>
+  </header>
 
-    <div class="tarjeta">
-      <h2>Soldador/a MIG</h2>
+  <section class="ofertas">
+    <div class="card">
+      <h2>Soldador MIG/MAG</h2>
+      <p>Empresa: Metalúrgica Pérez</p>
       <p>Ubicación: Madrid</p>
-      <p>Experiencia: 3 años</p>
-      <p>Contacto: empleo@empresa.com</p>
+      <button>Ver más</button>
     </div>
-
-    <div class="tarjeta">
-      <h2>Operario/a de taller</h2>
-      <p>Ubicación: Barcelona</p>
-      <p>Experiencia: 2 años</p>
-      <p>Contacto: empleo@empresa.com</p>
+    <div class="card">
+      <h2>Inspector de Calidad</h2>
+      <p>Empresa: Aceros S.A.</p>
+      <p>Ubicación: Bilbao</p>
+      <button>Ver más</button>
     </div>
-  </body>
+  </section>
+</body>
 </html>

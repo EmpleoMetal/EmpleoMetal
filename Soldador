@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soldador MIG/MAG</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f9; }
+    header { background:#003366; color:white; padding:1rem; text-align:center; }
+    a { color:#003366; text-decoration:none; font-weight:bold; }
+    .detalle { padding:1rem; max-width:600px; margin:auto; background:white; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+    button { background:#003366; color:white; border:none; padding:0.5rem 1rem; border-radius:5px; cursor:pointer; }
+    button:hover { background:#0055aa; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Soldador MIG/MAG</h1>
+  </header>
+
+  <div class="detalle">
+    <p><strong>Empresa:</strong> Metalúrgica Pérez</p>
+    <p><strong>Ubicación:</strong> Madrid</p>
+    <p><strong>Descripción:</strong> Se busca soldador MIG/MAG con experiencia mínima de 3 años en estructuras metálicas. Se valorará certificado de soldadura y disponibilidad inmediata.</p>
+    <p><strong>Requisitos:</strong> Experiencia en MIG/MAG, capacidad de lectura de planos, responsabilidad y puntualidad.</p>
+    <button onclick="alert('¡Te has postulado a esta oferta!')">Postularse</button>
+    <p><a href="index.html">← Volver al inicio</a></p>
+  </div>
+</body>
+</html>

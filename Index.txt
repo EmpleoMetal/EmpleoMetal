@@ -1,15 +1,25 @@
-<h1>Ofertas de empleo del sector metal</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>EmpleoMetal</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Bienvenido a EmpleoMetal</h1>
 
-<div class="tarjeta">
-  <h2>Soldador/a MIG</h2>
-  <p>Ubicación: Madrid</p>
-  <p>Experiencia: 3 años</p>
-  <p>Contacto: empleo@empresa.com</p>
-</div>
+    <div class="tarjeta">
+      <h2>Soldador/a MIG</h2>
+      <p>Ubicación: Madrid</p>
+      <p>Experiencia: 3 años</p>
+      <p>Contacto: empleo@empresa.com</p>
+    </div>
 
-<div class="tarjeta">
-  <h2>Operario/a de taller</h2>
-  <p>Ubicación: Barcelona</p>
-  <p>Experiencia: 2 años</p>
-  <p>Contacto: empleo@empresa.com</p>
-</div>
+    <div class="tarjeta">
+      <h2>Operario/a de taller</h2>
+      <p>Ubicación: Barcelona</p>
+      <p>Experiencia: 2 años</p>
+      <p>Contacto: empleo@empresa.com</p>
+    </div>
+  </body>
+</html>
